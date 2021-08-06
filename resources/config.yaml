@@ -1,0 +1,25 @@
+VERSION: v0.1
+
+INFLUXDB:
+  DBPath: http://localhost:8086
+  AuthToken: jTlEnS2YQDIDuOJwY9C90Q5y1u0syUR6bdw7Gx1b4-TweYzplg1L2QQ8YcgYHtdI6HIKbi_6YlrpFNvr8spBZQ==
+  ORGANIZATION: Monitoring
+  BUCKET: monitoring
+
+TARGET:
+  FOLDER:
+    Active: "on"
+    DataPath: /home/hama/monitoring
+    MEASUREMENT: folder_status
+  QUORUM:
+    Active: "on"
+    URL: "http://localhost:22000"
+    MEASUREMENT: quorum_status
+
+
+LOG:
+  LogPath: /home/hama/monitoring/log/
+  LogOutPut: both  # console, file
+  LogLevel: trace
+
+
